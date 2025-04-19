@@ -4,6 +4,7 @@ import com.osvaldo.gra.model.Movie;
 import com.osvaldo.gra.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
@@ -11,6 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 @Component
+@Profile("!test")
 public class CsvInsert implements CommandLineRunner {
 
     @Autowired
