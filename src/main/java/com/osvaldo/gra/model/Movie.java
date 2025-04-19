@@ -1,19 +1,33 @@
 package com.osvaldo.gra.model;
 
-public class Movies {
-    private int id_movie;
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "movie")
+public class Movie {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_movie", nullable = false)
+    private Integer id_movie;
+
+    @Column(name = "movie_year", nullable = false )
     private int year;
+
+    @Column(name = "title", nullable = false, length = 250)
     private String title;
+
+    @Column(name = "studio", nullable = false, length = 250)
     private String studio;
+
+    @Column(name = "producer", nullable = false, length = 250)
     private String producer;
+
+    @Column(name = "winner", nullable = true, length = 4)
     private String winner;
 
     public int getId_movie() {
         return id_movie;
-    }
-
-    public void setId_movie(int id_movie) {
-        this.id_movie = id_movie;
     }
 
     public int getYear() {
