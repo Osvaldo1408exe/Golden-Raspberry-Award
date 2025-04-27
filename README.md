@@ -26,12 +26,11 @@ Para alterar os dados, acesse o arquivo .csv em ``src/main/java/resources/moviel
 
 
 ### Como utilizar (Test)
-No ambiente de testes é possível verificar se algum produtor retornou no menor intervalo, no maior intervalo e se o valor especificado está em menores intervalos
+No ambiente de testes é possível verificar se a fonte de dados foi alterada, fazendo validação dos resultados com a resposta do endpoint.
 
 Na IDE execute o arquivo AwardIntegrationTest em:
 ````
-src/test/java/com.osvaldo.gra/
+src/test/java/com.osvaldo.gra.integration/
 ````
-
-Para alterar os dados, acesse o arquivo .sql em ``src/main/java/resources/teste-data.sql``
+Para alterar os dados, acesse o arquivo .json em ``src/main/java/resources/expected_award_intervals.json``
 
